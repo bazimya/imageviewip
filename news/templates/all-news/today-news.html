@@ -3,6 +3,7 @@
 <!-- Some content here-->
 
 <!-- Looping through news end   -->
+ {% load static%} 
 {% block content %}
 {{block.super}}
 <div class="container-fluid">
@@ -16,4 +17,10 @@
 
 </div>
 
+
+{% endblock %}
+
+<!--End of the block content-->
+{% block scripts %} {{block.super}}
+  <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
 {% endblock %}
